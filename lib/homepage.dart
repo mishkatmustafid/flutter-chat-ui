@@ -9,23 +9,30 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        backgroundColor: Theme.of(context).primaryColor,
+        appBar: AppBar(
+          backgroundColor: Theme.of(context).primaryColor,
+          leading: IconButton(
+              icon: const Icon(Icons.menu),
+              iconSize: 30.0,
+              color: Colors.white,
+              onPressed: () {}),
+          title: const Text('Chats',
+              style: TextStyle(fontSize: 28.0, fontWeight: FontWeight.bold)),
+          centerTitle: true,
+          elevation: 0.0,
+          actions: <Widget>[
+            IconButton(
+                icon: const Icon(Icons.search),
+                iconSize: 30.0,
+                color: Colors.white,
+                onPressed: () {})
+          ],
+        ),
+        body: Column(
           children: <Widget>[
             const Text(
               'You have pushed the button this many times:',
@@ -35,13 +42,6 @@ class _MyHomePageState extends State<MyHomePage> {
               style: Theme.of(context).textTheme.headlineMedium,
             ),
           ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
-    );
+        ));
   }
 }

@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_chat_ui/widgets/category_selector.dart';
 import 'package:flutter_chat_ui/widgets/favorite_contacts.dart';
+import 'package:flutter_chat_ui/widgets/recent_chats.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
@@ -47,7 +48,10 @@ class _MyHomePageState extends State<MyHomePage> {
                     borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(30.0),
                         topRight: Radius.circular(30.0))),
-                child: Column(children: const <Widget>[FavoriteContacts()]),
+                child: Column(children: const <Widget>[
+                  FavoriteContacts(),
+                  ReecentChats()
+                ]),
               ),
             ),
           ],

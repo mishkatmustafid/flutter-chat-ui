@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_chat_ui/widgets/category_selector.dart';
+import 'package:flutter_chat_ui/widgets/favorite_contacts.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
@@ -38,6 +39,16 @@ class _MyHomePageState extends State<MyHomePage> {
         body: Column(
           children: <Widget>[
             const CategorySelector(),
+            Expanded(
+              child: Container(
+                height: 500.0,
+                decoration: BoxDecoration(
+                    color: Theme.of(context).colorScheme.secondary,
+                    borderRadius: const BorderRadius.only(
+                        topLeft: Radius.circular(30.0),
+                        topRight: Radius.circular(30.0))),
+                child: Column(children: const <Widget>[FavoriteContacts()]),
+              ),
             ),
           ],
         ));

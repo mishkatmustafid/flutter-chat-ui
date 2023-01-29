@@ -1,22 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_chat_ui/routes.dart';
 
-void main() {
-  SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
-
-  runApp(MyApp());
-}
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Chat UI',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+          primaryColor: Colors.red,
+          colorScheme: ColorScheme.fromSwatch()
+              .copyWith(secondary: const Color(0xFFFEF9EB))),
       initialRoute: '/',
       routes: routes,
     );

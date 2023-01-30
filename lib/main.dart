@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_chat_ui/routes.dart';
+import 'package:flutter_chat_ui/homepage.dart';
 
 void main() => runApp(const MyApp());
 
@@ -15,8 +15,7 @@ class MyApp extends StatelessWidget {
           primaryColor: Colors.red,
           colorScheme: ColorScheme.fromSwatch()
               .copyWith(secondary: const Color(0xFFFEF9EB))),
-      initialRoute: '/',
-      routes: routes,
+      home: const MyHomePage(),
     );
   }
 }

@@ -6,8 +6,7 @@ import 'package:flutter_chat_ui/widgets/favorite_contacts.dart';
 import 'package:flutter_chat_ui/widgets/recent_chats.dart';
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-  final String title;
+  const MyHomePage({super.key});
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
